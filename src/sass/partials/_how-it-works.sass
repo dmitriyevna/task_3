@@ -1,0 +1,18 @@
+.how-it-works
+	padding: 58px 0 70px
+	&__textual
+		line-height: 1.75em
+		color: $color-text
+		max-width: 360px
+		margin: 25px auto 
+		text-align: center 
+.how-it-works .grid-content
+	flex-wrap: nowrap
+	&__item
+		border-right: 1px solid $color-border
+		&:nth-child(4n)
+			border: none
+		+r(900)
+			border: none
+	+r(900)
+			flex-wrap: wrap

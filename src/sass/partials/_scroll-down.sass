@@ -1,0 +1,21 @@
+.scroll-down
+	display: inline-block
+	position: relative
+	top: -33px
+	left: calc(50% - 33px)
+	width: 66px
+	height: 66px
+	background-color: #fffefe
+	box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15)
+	-webkit-border-radius: 50% 
+	border-radius: 50%
+	text-align: center
+	z-index: 100
+	& > svg
+		width: 16px
+		height: 34px
+		margin-top: 17px
+	&:hover
+		box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4)
+		& > svg
+			fill: $color-accent

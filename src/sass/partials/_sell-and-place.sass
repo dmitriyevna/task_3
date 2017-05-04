@@ -1,0 +1,74 @@
+.sell-and-place
+	position: relative
+	max-width: 1920px
+	margin: auto
+	top: -18px
+	&__in
+		display: flex
+		flex-direction: row-reverse
+		align-items: flex-end	
+		&:nth-child(2n)
+			flex-direction: row
+			align-items: flex-start
+			+r(900)
+				flex-direction: column
+			.sell-and-place__block
+				+gh(45deg, $color-accent_second 0%, $color-accent 100%)
+		+r(900)
+			flex-direction: column
+		.list__item
+			padding-left: 57px 
+			margin: 24px 0 
+			@include pseudo
+			&:before
+				width: 38px
+				height: 38px
+				background-color: white
+				-webkit-border-radius: 50% 
+				 border-radius: 50%  
+				top: -8px
+				background-image: url('/img/checked.svg')
+				background-size: 22px
+				background-repeat: no-repeat
+				background-position: center  
+			&:last-of-type
+				margin-bottom: 0
+		&:nth-child(1)
+			.sell-and-place__img
+				background-image: url('/img/selling-place.jpg')
+			.list__item:before
+				background-image: url('/img/checked_green.svg') 
+		&:nth-child(2)
+			.sell-and-place__img
+				background-image: url('/img/place-ads.jpg')
+			.list__item:before
+				background-image: url('/img/checked_blue.svg') 
+
+	&__block,
+	&__img
+		max-width: 960px
+		width: 50vw
+		+r(900)
+			width: 100vw
+	&__block
+		padding: 86px
+		color: white
+		+gh(45deg, $color-accent 0%, $color-accent_second 100%)	
+		min-height: 500px
+		flex-grow: 1	
+	&__title
+		+css-lock(22, 32, 320, 1172, font-size)  
+		line-height: 1.3125em
+		max-width: 777px  
+		margin-bottom: 30px 
+	&__img
+		max-width: 960px
+		height: 532px
+		overflow: hidden
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat  
+	&__textual
+		line-height: 1.75em 
+		max-width: 710px
+		margin-bottom: 40px 

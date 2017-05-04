@@ -1,0 +1,21 @@
+.grid-content
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	flex-wrap: wrap
+	margin-top: 40px 
+	&__icon
+		margin-bottom: 15px 
+		& > svg
+			fill: $color-accent_second
+			font-size: 45px 
+	&__title,
+	&__textual
+		margin-bottom: 10px 
+	&__item
+		width: 312px
+		text-align: center
+	&__textual
+		color: $color-text
+		+css-lock(12, 14, 320, 1172)
+		line-height: 1.714em

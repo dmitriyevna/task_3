@@ -1,0 +1,41 @@
+.hero
+	color: #fffefe
+	&__title 
+		max-width: 495px
+		line-height: 1.3em
+	&__textual
+		margin: 31px 0 52px
+		font-size: 22px
+		line-height: 2em  
+.slider
+	&__item
+		min-height: 877px
+		background-size: cover 
+		background-position: top center
+	&__content
+		margin: 356px auto 0 
+	&__nav
+		bottom: 137px
+		right: 10px
+
+.slick-arrow 
+	position: absolute
+	cursor: pointer
+	width: 58px
+	height: 58px
+	right: 0
+	opacity: 0.65
+	border: 2px solid white
+	background-color: transparent
+	border-radius: 50%
+	text-align: center
+	z-index: 100
+	& > svg
+		// position: relative
+		font-size: 20px 
+		height: 100%
+		fill: white
+	&:hover
+		opacity: 1
+.slick-prev
+	right: 72px

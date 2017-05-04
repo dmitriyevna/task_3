@@ -1,0 +1,16 @@
+<!-- begin grid-content -->
+	<div class="grid-content">
+		{% for item in items %}
+		{% set icon = item.icon %}
+		<div class="grid-content__item">
+			<div class="grid-content__icon">
+				{{ mixins.icon(icon) }}
+			</div>
+			<h5 class="title title_h5 grid-content__title">{{ item.header }}</h5>
+			<p class="grid-content__textual">
+				{{ item.textual }}
+			</p>
+		</div>
+		{% endfor %}
+	</div>
+<!-- end grid-content -->

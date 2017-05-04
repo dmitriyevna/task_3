@@ -1,0 +1,123 @@
+---
+title: Spacewolf - home page
+
+slider: 
+  - 
+    header: Crowdsourced ad Space
+    img: ../img/hero__slide_1.jpg
+    textual: A peer-to-peer advertising platform
+  - 
+    header: Lorem
+    img: ../img/hero__slide_2.jpg
+    textual: Some text
+
+whySpacewolff: 
+  - 
+    header: Easy to Use
+    icon: mouse
+    textual: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+  - 
+    header: Save Your Time
+    icon: clock
+    textual: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+  - 
+    header: Effective
+    icon: pie
+    textual: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+
+sellAndPlace:
+  -
+   header: Sell Your Excess Space to Advertisers
+   textual: 
+     - Donec eu egestas massa. Pellentesque viverra viverra tellus, non tempor libero lobortis vel. Mauris nec sollicitudin velit. Nam dui nibh, consequat sed dolor non, commodo consequat felis. Maecenas aliquet arcu id mattis vestibulum. Donec in lacus pulvinar, posuere magna ac, tempor quam. Aenean iaculis mi ac sapien.
+   list: 
+     - Aenean iaculis mi ac sapien mollis, posuere semper nibh finibus.
+     - Suspendisse pharetra elit ut neque viverra condimentum.
+     - Cras nec lorem a nisl auctor sodales sed sed quam posuere semper.
+  -
+   header: Place Ads Directly Through Spacewolff
+   textual: 
+     - Donec eu egestas massa. Pellentesque viverra viverra tellus, non tempor libero lobortis vel. Mauris nec sollicitudin velit. Nam dui nibh, consequat sed dolor non, commodo consequat felis. Maecenas aliquet arcu id mattis vestibulum. Donec in lacus pulvinar, posuere magna ac, tempor quam. Aenean iaculis mi ac sapien.
+   list:
+     - Aenean iaculis mi ac sapien mollis, posuere semper nibh finibus.
+     - Suspendisse pharetra elit ut neque viverra condimentum.
+     - Cras nec lorem a nisl auctor sodales sed sed quam posuere semper.
+
+howItWorks: 
+  - 
+    header: Create an Account
+    icon: monitor
+    textual: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+  - 
+    header: Search For Ad Space
+    icon: location
+    textual: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+  -
+    header: Apply For Ad Space
+    icon: check_sq
+    textual: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+  -
+    header: Your Ad Is Placed
+    icon: billboard
+    textual: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.
+
+makeSimple:
+    img: img/mockup.png
+    header: we make advertising simple
+    textual:
+      - Find ad space that reaches your targeted audience and place ads directly through the site. Monetize your space by selling it to the advertisers on the site.
+      - View your user dashboard to see how much you’ve earned and how much you’ve spent.
+
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include "partials/_hero.html" %}
+
+  <!-- begin scroll-down -->
+    <a href="#why-spacewoff" class="scroll-down">
+      {{mixins.icon('mouse_down')}}
+    </a>
+  <!-- end scroll-down -->
+
+	<!-- begin l-container -->
+		<div class="l-container">
+
+		<!-- begin why-spacewoff -->
+			<div id="why-spacewoff" class="why-spacewoff">
+				<h3 class="title title_h3">why spacewolf</h3>
+				{% set items = whySpacewolff %}
+				{% include "partials/_grid-content.html" %}
+			</div>
+		<!-- end why-spacewoff -->
+    
+    {% include "partials/_make-simple.html" %}
+
+		</div>
+	<!-- end l-container -->
+
+	{% include "partials/_sell-and-place.html" %}
+
+  <!-- begin l-container -->
+  <div class="l-container">
+
+  	<!-- begin how-it-works -->
+  		<div class="how-it-works">
+  			<h3 class="title title_h3">how it works</h3>
+  			<p class="how-it-works__textual">
+  				Our marketplace connects advertisers and sellers of ad space directly.
+  			</p>
+  			{% set items = howItWorks %}
+  			{% include "partials/_grid-content.html" %}
+  		</div>
+  	<!-- end how-it-works -->
+
+  		{% include "partials/_banner.html" %}
+
+		</div>
+	<!-- end l-container -->
+	
+{% endblock %}
+

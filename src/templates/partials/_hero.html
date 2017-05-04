@@ -1,0 +1,18 @@
+<!-- begin hero -->
+	<div class="hero slider">
+		{% for slide in slider %}
+		<div class="slider__item" style="background-image: url('{{ slide.img }}');">
+			<!-- begin l-container -->
+				<div class="slider__content l-container">
+					<h2 class="title title_h2 hero__title">{{ slide.header}}</h2>
+					<p class="hero__textual">
+						{{ slide.textual}}
+					</p>
+					<a href="#" class="btn btn_background-grad">start selling, now</a>			
+				</div>
+			<!-- end l-container -->
+		</div>
+		{% endfor %}	
+		<div class="slider__nav l-container"></div>
+	</div>
+<!-- end hero -->			

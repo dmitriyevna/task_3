@@ -1,0 +1,22 @@
+<!-- begin make-simple -->
+	<div class="make-simple">
+		<!-- begin make-simple -->
+			<div class="make-simple">
+				<h3 class="title title_h3">{{ makeSimple.header }}</h3>
+				<div class="make-simple__in">
+					<div class="make-simple__mockup">
+			          <img src="{{ makeSimple.img }}" alt="Mockup">
+			        </div>
+			        <div class="make-simple__info">
+			        	{% for text in makeSimple.textual %}
+							<p class="make-simple__textual">
+								{{ text }}
+							</p>
+						{% endfor %}
+						<a href="#" class="btn make-simple__btn">Get started</a>
+			        </div> 	
+		        </div>
+			</div>
+		<!-- end make-simple -->
+	</div>
+<!-- end make-simple -->

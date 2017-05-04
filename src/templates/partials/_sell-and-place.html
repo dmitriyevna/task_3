@@ -1,0 +1,21 @@
+<!-- begin sell-and-place -->
+	<div class="sell-and-place">
+    {% for item in sellAndPlace %}
+      <div class="sell-and-place__in">
+        <div class="sell-and-place__img"></div>
+        <div class="sell-and-place__block">
+          <h3 class="title title_h3 title_light sell-and-place__title">{{ item.header }}</h3>
+          <div class="sell-and-place__info">
+            {% for text in item.textual %}
+              <p class="sell-and-place__textual">
+                {{ text }}
+              </p>
+            {% endfor %}
+            {% set list = item.list %}
+            {% include "partials/_list.html" %}
+          </div>
+        </div> 
+      </div>   
+    {% endfor %}
+	</div>
+<!-- end sell-and-place -->

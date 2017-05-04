@@ -1,0 +1,38 @@
+.banner
+	padding: 115px 0
+	background-image: url('/img/banner.png')
+	background-repeat: no-repeat 
+	background-size: cover
+	background-position: center
+	&__in
+		display: flex
+		flex-direction: row
+		justify-content: space-between 
+		align-items: start
+		+r(900)
+			flex-direction: column
+			align-items: center
+	&__title,
+	&__textual
+		padding: 0 50px
+		border-right: 1px solid $color-border
+		+r(900)
+			border-right: none 
+			text-align: center
+	&__title
+		min-width: 250px
+		+r(900)
+			margin-bottom: 20px 
+	&__textual
+		color: white
+		text-transform: uppercase 
+		line-height: 1.75 
+		min-height: 72px
+		+r(900)
+			width: 100%
+			margin-top: 20px 
+	&__btn
+		padding: 10px 25px
+		text-align: center
+		
+		
